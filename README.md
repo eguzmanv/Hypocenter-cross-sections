@@ -1,6 +1,6 @@
 # Cross-section generation with Python
 
-This repository provides a Python implementation for generating cross-section plots in seismology research. The method offers an easy and efficient way to create cross-sections, allowing you to to analyze hypocenter distribution.
+This repository provides a Python code for generating cross-section plots in seismology research. The method offers an easy and efficient way to create cross-sections, allowing you to to analyze hypocenter distribution.
 
 ## Overview
 
