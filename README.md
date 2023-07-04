@@ -31,6 +31,12 @@ The following Python libraries are used in this project:
 - Matplotlib
 - Obspy
 
+## Colab
+
+Open the Jupyter Notebook in Google Colab:
+
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eguzmanv/Hypocenter-cross-sections/blob/main/hypo_xsects_COLAB.ipynb)
+
 ## Contributing
 
 Contributions to this repository are welcome! If you have any suggestions/improvements/bug fixes, please feel free to submit a pull request.
