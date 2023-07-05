@@ -41,7 +41,7 @@ class Xsections:
             >>> proj      : np.ndarray
                             Projection coordinates
             >>> proj_dist : int, float
-                            Projection magnitude from p1 (westermost 
+                            Projection magnitude [deg] from p1 (westermost 
                             point on line) to proj.
         '''
         p1, p2   = sorted((p1, p2), key = lambda x:x[0])
@@ -182,19 +182,16 @@ class Xsections:
 
     def get_section_coordinates_list(self, p1, az, sect_length, n, d, x_move = 0, y_move = 0):
         '''
-        - Description           : Compute list of coordinates of n sections parallel to the strike 
-                                  or to the dip direction of the main fault plane.
+        - Description           : Compute list of coordinates of n cross sections.
         - Input parameters      : 
             <<< p1              : tuple, list
-                                  Suggested coordinate (x, y). Note: Considering this point and the slope of 
-                                  the strike (angle with respect to EW-axis), the contiguous cross sections
-                                  will always be done to the west.
+                                  Suggested initial coordinate (x, y).
             <<< az              : int, float
                                   Azimuth of cross section [degrees]. 0° and 360° are the north direction.
             <<< sect_length     : int, float
                                   Cross section length [km] (measured from p1)
             <<< n               : int
-                                  Number of cross sections from east to west
+                                  Number of cross sections from west to east
             <<< d               : int, float
                                   Section width [km]
             <<< x_move          : int, float, default = 0
