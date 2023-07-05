@@ -118,11 +118,11 @@ class Xsections:
         u2 = v2 / np.linalg.norm(v2)
 
         # Return coordinates
-        p11 = np.array(p1) + u1 * d
-        p12 = np.array(p1) + u1 * - d
+        p11 = np.array(p1) + u1 * (d / 2)
+        p12 = np.array(p1) + u1 * - (d / 2)
 
-        p21 = np.array(p2) + u2 * d
-        p22 = np.array(p2) + u2 * - d
+        p21 = np.array(p2) + u2 * (d / 2)
+        p22 = np.array(p2) + u2 * - (d / 2)
             # List of tuples
         coord_list = [tuple(p11), tuple(p12), tuple(p21), tuple(p22)]
             # Check validity of the polygon
