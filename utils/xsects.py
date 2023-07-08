@@ -20,7 +20,7 @@ class Xsections:
 
     # author        : Emmanuel Guzman Vitola
     # email         : emguzmanvi@unal.edu.co
-    # last modified : 01/07/2023
+    # last modified : 07/07/2023
     '''
 
     def __init__(self):
@@ -163,7 +163,7 @@ class Xsections:
         # Create file
         f = open(fpath, 'w')
             # Write header
-        f.write('ID lon[deg] lat[deg] depth[km] mag[ML] lon_proj[deg] lat_proj[deg] dist_proj[deg] dist_km_proj[deg]\n')
+        f.write('ID lon[deg] lat[deg] depth[km] mag[ML] lon_proj[deg] lat_proj[deg] dist_proj[deg] dist_km_proj[km]\n')
         for row in cat:
             # Get data
             ID   = row[0]                                                              # ID
@@ -235,7 +235,7 @@ class Xsections:
         
             # First pair
         p1, p2   = sorted((p1, p2), key = lambda x:x[0])
-        # Find n cross sections perpendicular to estimated fault plane
+        # Find n cross sections
         sect_coord_list = [[p1, p2]]                                                 # list of pair coordinates [[tuple1, tuple2], [tuple1, tuple2]]
             # Loop: go through each n cross section and compute the rightmost coordinate pairs
         for i in range(1, n * 2):
